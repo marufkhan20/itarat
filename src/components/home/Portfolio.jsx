@@ -11,15 +11,15 @@ const Portfolio = () => {
         <Line />
 
         <div className="mt-9">
-          <div className="flex items-center justify-between gap-2">
+          <div className="grid sm:grid-cols-3 items-center justify-between gap-2">
             <img className="w-full" src="/images/portfolio/1.png" alt="" />
             <img className="w-full" src="/images/portfolio/2.png" alt="" />
             <img className="w-full" src="/images/portfolio/3.png" alt="" />
           </div>
 
-          <div className="flex justify-between gap-2 mt-2">
+          <div className="grid sm:grid-cols-3 justify-between gap-2 mt-2">
             <img className="w-full" src="/images/portfolio/4.png" alt="" />
-            <div className="w-full">
+            <div className="w-full flex gap-2 flex-col">
               <img className="w-full" src="/images/portfolio/5.png" alt="" />
               <img className="w-full" src="/images/portfolio/6.png" alt="" />
             </div>
