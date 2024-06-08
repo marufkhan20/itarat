@@ -7,7 +7,7 @@ const Loading = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 65000);
   }, []);
 
   return (
@@ -18,7 +18,7 @@ const Loading = () => {
         } min-h-screen w-full flex justify-center items-center`}
       >
         <img
-          className="animate-ping duration-700!"
+          className="animate-ping w-[80%] mx-auto sm:w-fit duration-700!"
           src="/images/logo.png"
           alt=""
         />
