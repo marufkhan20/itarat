@@ -1,0 +1,68 @@
+const collections = [
+  {
+    id: 1,
+    name: "Arabic Hijab",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/1.png",
+  },
+  {
+    id: 2,
+    name: "Arabic Hijab 2",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/2.png",
+  },
+  {
+    id: 3,
+    name: "Arabic Hijab 3",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/3.png",
+  },
+  {
+    id: 4,
+    name: "Arabic Hijab",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/4.png",
+  },
+  {
+    id: 5,
+    name: "Arabic Hijab",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/5.png",
+  },
+  {
+    id: 6,
+    name: "Arabic Hijab",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/6.png",
+  },
+  {
+    id: 7,
+    name: "Arabic Hijab",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/7.png",
+  },
+  {
+    id: 8,
+    name: "Arabic Hijab",
+    quality: "100% QC pass Product",
+    gsm: "260-300 GSM",
+    colors: ["White", "Black", "Green", "Pink"],
+    thumbnail: "/images/collections/8.png",
+  },
+];
+
+export default collections;

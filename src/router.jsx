@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Loading from "./components/Loading";
 import Home from "./pages/Home";
+import Myra from "./pages/Myra";
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/myra",
+        element: <Myra />,
       },
     ],
   },
