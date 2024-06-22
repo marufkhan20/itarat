@@ -7,7 +7,7 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
   return (
     <div
       className={`fixed transition-all duration-300 ${
-        openMenu ? "left-0" : "-left-[100%]"
+        openMenu ? "left-0" : "-left-[400%]"
       } xl:-left-[100%] top-0 left-0 h-full w-full z-[10000] bg-black/30`}
       // onClick={() => setOpenMenu(false)}
     >
