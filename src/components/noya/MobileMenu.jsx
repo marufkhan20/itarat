@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const MobileMenu = ({ openMenu, setOpenMenu }) => {
+  const [test, setTest] = useState("");
   return (
     <div
       className={`fixed transition-all duration-300 ${
@@ -20,6 +21,12 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
             className="cursor-pointer text-xl"
           />
         </div>
+        <input
+          type="text"
+          placeholder="hello"
+          value={test}
+          onChange={(e) => setTest(e.target.value)}
+        />
         <ul className="flex p-6 flex-col gap-9 overflow-auto">
           <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
             <Link to="#">News</Link>
