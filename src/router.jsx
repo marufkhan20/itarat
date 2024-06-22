@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import Myra from "./pages/Myra";
+import Noya from "./pages/Noya";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
       {
         path: "/myra",
         element: <Myra />,
+      },
+      {
+        path: "/noya",
+        element: <Noya />,
       },
     ],
   },
