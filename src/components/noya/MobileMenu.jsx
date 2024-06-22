@@ -8,10 +8,10 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
       className={`fixed transition-all duration-300 ${
         openMenu ? "left-0" : "-left-[100%]"
       } xl:-left-[100%] top-0 left-0 h-full w-full z-[10000] bg-black/30`}
-      onClick={() => setOpenMenu(false)}
+      // onClick={() => setOpenMenu(false)}
     >
       <nav
-        onClick={(e) => e.stopPropagation()}
+        // onClick={(e) => e.stopPropagation()}
         className="w-full sm:w-[384px] bg-white h-full"
       >
         <div className="p-6">
