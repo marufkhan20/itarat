@@ -5,7 +5,7 @@ const Categories = () => {
   return (
     <section className="mt-10">
       <div className="container">
-        <div className="grid grid-cols-8 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-5">
           <Category image="1.webp" name="Kurtas" />
           <Category image="2.webp" name="Dresses" />
           <Category image="3.webp" name="Co-Ords" />
