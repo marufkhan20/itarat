@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { FaYoutube } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa6";
+import { IoLogoInstagram } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -43,17 +46,17 @@ const Footer = () => {
             <ul className="flex flex-col gap-5 justify-end items-end">
               <li>
                 <Link to="#">
-                  <img src="/images/icons/facebook.png" alt="" />
+                  <FaFacebook className="text-white text-3xl" />
                 </Link>
               </li>
               <li>
                 <Link to="#">
-                  <img src="/images/icons/instagram.png" alt="" />
+                  <IoLogoInstagram className="text-white text-3xl" />
                 </Link>
               </li>
               <li>
                 <Link to="#">
-                  <img src="/images/icons/youtube.png" alt="" />
+                  <FaYoutube className="text-white text-3xl" />
                 </Link>
               </li>
             </ul>
