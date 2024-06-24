@@ -1,15 +1,17 @@
-import Collections from "../components/myra/collections";
-import Footer from "../components/myra/Footer";
-import Header from "../components/myra/Header";
-import UpcomingCollections from "../components/myra/UpcomingCollections";
+import Categories from "../components/myra/categories";
+import Hero from "../components/myra/hero";
+import SpecialSale from "../components/myra/SpecialSale";
+import Weedings from "../components/myra/weedings";
+import Header from "../components/shared/header";
 
 const Myra = () => {
   return (
     <main>
       <Header />
-      <Collections />
-      <UpcomingCollections />
-      <Footer />
+      <Categories />
+      <Hero />
+      <SpecialSale />
+      <Weedings />
     </main>
   );
 };

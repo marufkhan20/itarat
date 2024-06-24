@@ -2,8 +2,8 @@ import React from "react";
 import Arrivals from "../components/noya/arrivals";
 import Brands from "../components/noya/brands";
 import Footer from "../components/noya/Footer";
-import Header from "../components/noya/Header";
 import Offers from "../components/noya/Offers";
+import Header from "../components/shared/header";
 
 const Noya = () => {
   return (

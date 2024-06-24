@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoBagOutline, IoSearchOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const { pathname } = useLocation();
+  console.log("pathname: ", pathname);
   return (
     <header>
       <div className="border-b">
@@ -26,7 +28,17 @@ const Header = () => {
             </div>
           </div>
           <div>
-            <img src="/images/services/2.png" className="h-20" alt="" />
+            {pathname === "/" && (
+              <img src="/images/services/3.png" className="h-20" alt="" />
+            )}
+
+            {pathname === "/noya" && (
+              <img src="/images/services/2.png" className="h-20" alt="" />
+            )}
+
+            {pathname === "/myra" && (
+              <img src="/images/services/1.png" className="h-20" alt="" />
+            )}
           </div>
           <div className="flex items-center gap-5 text-2xl">
             <FaRegHeart className="cursor-pointer" />

@@ -39,7 +39,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="absolute px-5 right-0 sm:px-0 sm:right-5 md:right-0 bottom-10">
+          <div className="absolute px-5 right-0 sm:px-0 sm:right-5 md:right-10 bottom-10">
             <ul className="flex flex-col gap-5 justify-end items-end">
               <li>
                 <Link to="#">

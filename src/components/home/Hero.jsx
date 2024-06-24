@@ -12,7 +12,7 @@ const Hero = () => {
     autoplaySpeed: 2000,
   };
   return (
-    <section>
+    <section className="mt-10">
       <div className="container">
         <div className="slider-container">
           <Slider {...settings}>
