@@ -5,14 +5,18 @@ import SubHeading from "./SubHeading";
 
 const SpecialSale = () => {
   return (
-    <section className="py-5 bg-[#F8F8F8]">
+    <section className="py-5 bg-[#F8F8F8] h-fit!">
       <div className="container">
         <SubHeading>MEET OUR BESTSELLERS</SubHeading>
         <Heading>On Special SALE</Heading>
 
-        <div className="mt-5 grid grid-cols-3 gap-8">
+        <div className="mt-5 grid sm:grid-cols-3 gap-8">
           <div className="relative">
-            <img src="/images/myra/special/1.webp" className="w-full" alt="" />
+            <img
+              src="/images/myra/special/1.webp"
+              className="w-full h-full"
+              alt=""
+            />
             <div className="absolute bottom-12 left-14">
               <h2 className="uppercase text-lg font-bold text-white">
                 chandrima
@@ -44,7 +48,11 @@ const SpecialSale = () => {
             </div>
           </div>
           <div className="relative">
-            <img src="/images/myra/special/4.webp" className="w-full" alt="" />
+            <img
+              src="/images/myra/special/4.webp"
+              className="w-full h-full"
+              alt=""
+            />
             <div className="absolute bottom-12 left-14">
               <h2 className="uppercase text-lg font-bold text-white">
                 chandrima
