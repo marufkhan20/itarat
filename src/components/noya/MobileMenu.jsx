@@ -17,7 +17,7 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
       >
         <div className="p-6">
           <RiCloseLargeLine
-            onClick={() => alert("hello")}
+            onClick={() => setOpenMenu(false)}
             className="cursor-pointer text-xl"
           />
         </div>
