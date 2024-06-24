@@ -3,7 +3,6 @@ import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import Myra from "./pages/Myra";
 import Noya from "./pages/Noya";
-import Test from "./pages/Test";
 
 export const router = createBrowserRouter([
   {
@@ -21,10 +20,6 @@ export const router = createBrowserRouter([
       {
         path: "/noya",
         element: <Noya />,
-      },
-      {
-        path: "/test",
-        element: <Test />,
       },
     ],
   },
