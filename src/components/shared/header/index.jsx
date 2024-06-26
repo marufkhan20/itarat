@@ -125,7 +125,11 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className="flex items-center gap-5 text-2xl">
+          <div
+            className={`flex items-center gap-5 text-2xl ${
+              pathname === "/" ? "opacity-0" : "opacity-100"
+            }`}
+          >
             <FaRegHeart className="cursor-pointer" />
             <IoBagOutline className="cursor-pointer" />
           </div>
