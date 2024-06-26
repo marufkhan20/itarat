@@ -2,7 +2,7 @@ import React from "react";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-const MobileMenu = ({ openMenu, setOpenMenu }) => {
+const MobileMenu = ({ navItems, openMenu, setOpenMenu }) => {
   return (
     <div
       className={`fixed transition-all duration-300 ${
@@ -21,45 +21,14 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
           />
         </div>
         <ul className="flex p-6 flex-col gap-9 overflow-auto">
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">News</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Offers</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Outerwear</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Clothing</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Footwear</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Accessories</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Car Seats & Strollers</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Baby</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Toys</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Home</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Selections</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Archive</Link>
-          </li>
-          <li className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit">
-            <Link to="#">Brands</Link>
-          </li>
+          {navItems?.map((nav) => (
+            <li
+              key={nav?.name}
+              className="font-medium border-b transition-all border-transparent hover:border-black inline-block w-fit"
+            >
+              <Link to={nav?.link}>{nav?.name}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>

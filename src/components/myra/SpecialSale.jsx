@@ -17,7 +17,7 @@ const SpecialSale = () => {
               className="w-full h-full"
               alt=""
             />
-            <div className="absolute bottom-12 left-14">
+            <div className="absolute bottom-12 left-2 sm:left-14">
               <h2 className="uppercase text-lg font-bold text-white">
                 chandrima
               </h2>
@@ -53,7 +53,7 @@ const SpecialSale = () => {
               className="w-full h-full"
               alt=""
             />
-            <div className="absolute bottom-12 left-14">
+            <div className="absolute bottom-12  left-2 sm:left-14">
               <h2 className="uppercase text-lg font-bold text-white">
                 chandrima
               </h2>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const Loading = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,11 +18,29 @@ const Loading = () => {
           isLoading ? "opacity-100 visible" : "opacity-0 invisible"
         } min-h-screen w-full flex justify-center items-center`}
       >
-        <img
-          className="animate-ping w-[80%] mx-auto sm:w-fit duration-700!"
-          src="/images/logo.png"
-          alt=""
-        />
+        {pathname === "/" && (
+          <img
+            className="animate-ping w-[80%] mx-auto sm:w-fit duration-700!"
+            src="/images/logo.png"
+            alt=""
+          />
+        )}
+
+        {pathname === "/myra" && (
+          <img
+            className="animate-ping w-[80%] mx-auto sm:w-fit duration-700!"
+            src="/images/services/1.png"
+            alt=""
+          />
+        )}
+
+        {pathname === "/noya" && (
+          <img
+            className="animate-ping w-[80%] mx-auto sm:w-fit duration-700!"
+            src="/images/services/2.png"
+            alt=""
+          />
+        )}
       </div>
       <Outlet />
     </>

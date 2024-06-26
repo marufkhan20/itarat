@@ -1,13 +1,12 @@
 import Slider from "react-slick";
+import Heading from "../myra/Heading";
 import Line from "../ui/Line";
 
 const Portfolio = () => {
   return (
     <section className="pt-14 pb-28">
       <div className="container">
-        <h2 className="text-center font-normal text-[28px] leading-[42px] sm:text-[36px] sm:leading-[54px] md:text-[44px] md:leading-[66px] lg:text-[54px] lg:leading-[82px]">
-          Portfolio
-        </h2>
+        <Heading>Portfolio</Heading>
 
         <Line />
 

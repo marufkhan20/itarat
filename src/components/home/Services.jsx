@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "react-fancy-circular-carousel/FancyCarousel.css";
-import Slider from "react-slick/lib/slider";
+import { Link } from "react-router-dom";
+import Heading from "../myra/Heading";
 import Line from "../ui/Line";
 
 const Services = () => {
   const [focusElement, setFocusElement] = useState(0);
+  const [activeService, setActiveService] = useState(1);
+
   const images = [
     "/images/services/1.png",
     "/images/services/2.png",
@@ -15,13 +18,13 @@ const Services = () => {
       name: "Myra",
       description: "Capture The Best Precious Moments With Iitarat Frames",
       linkText: "Visit Now",
-      link: "/",
+      link: "/myra",
     },
     {
       name: "Noya",
       description: "Capture The Best Precious Moments With Iitarat Frames",
       linkText: "Book Now",
-      link: "/",
+      link: "/noya",
     },
     {
       name: "Iitarat",
@@ -31,121 +34,59 @@ const Services = () => {
     },
   ];
 
-  const imageSettings = {
-    dots: false,
-    infinite: true,
-    speed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-  };
+  useEffect(() => {
+    setInterval(() => {
+      setActiveService((prevItem) => (prevItem >= 3 ? 1 : prevItem + 1));
+    }, 5500);
+  }, []);
 
-  const textSettings = {
-    dots: false,
-    infinite: true,
-    speed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    rtl: true,
-  };
+  console.log("activeService", activeService);
   return (
-    <section className="py-20">
+    <section className="py-20 ">
       <div className="container">
-        <h2 className="text-center text-[32px] leading-[48px] sm:text-[48px] sm:leading-[72px] md:text-[64px] md:leading-[99px]">
-          Our Service
-        </h2>
+        <Heading>Our Service</Heading>
 
         <Line />
 
-        <div className="hidden sm:grid mt-6 overflow-hidden sm:grid-cols-2 gap-12">
-          {/* <FancyCarousel
-            images={images}
-            setFocusElement={setFocusElement}
-            carouselRadius={400}
-            peripheralImageRadius={100}
-            centralImageRadius={200}
-            focusElementStyling={{ border: "2px solid #ba4949" }}
-            autoRotateTime={3}
-            borderWidth={4}
-            borderHexColor={"1c364f"}
-          /> */}
-
-          <div>
-            <div className="slider-container">
-              <Slider {...imageSettings}>
-                <div>
+        <div className="grid sm:grid-cols-2 gap-12 overflow-hidden h-[500px] sm:h-[300px] mt-5 sm:mt-0">
+          <div className="flex items-center relative h-full w-full">
+            {images?.map((item, idx) => (
+              <div
+                key={item}
+                className={`service-image-container absolute top-0 justify-center w-full left-[-150%] py-3 h-full items-center ${
+                  idx + 1 === activeService ? "flex active" : "hidden"
+                }`}
+              >
+                <div className={`service-image`}>
                   <img
-                    className="shadow-2xl rounded-md"
-                    src="/images/services/1.png"
+                    className="w-full sm:w-[80%] lg:w-[300px] h-[100px] md:h-[150px] rounded-md"
+                    src={item}
                     alt=""
                   />
                 </div>
+              </div>
+            ))}
+          </div>
+          <div className="w-full h-full relative">
+            {info?.map((item, idx) => (
+              <div
+                key={idx}
+                className={`service-content absolute top-0 right-[-150%] w-full sm:mt-8 ${
+                  idx + 1 === activeService ? "block" : "hidden"
+                }`}
+              >
+                <h2 className="text-[28px] font-medium">{item?.name}</h2>
+                <p className="text-xl mt-4 font-medium">{item?.description}</p>
                 <div>
-                  <img
-                    className="shadow-2xl rounded-md"
-                    src="/images/services/2.png"
-                    alt=""
-                  />
+                  <Link
+                    to={item?.link}
+                    className="inline-block mt-6 font-medium text-[18px] px-4 py-2 sm:px-6 sm:py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 border rounded-[24px] border-black"
+                  >
+                    {item?.linkText}
+                  </Link>
                 </div>
-                <div>
-                  <img
-                    className="shadow-2xl rounded-md"
-                    src="/images/services/3.png"
-                    alt=""
-                  />
-                </div>
-              </Slider>
-            </div>
-          </div>
-
-          <div>
-            <div className="w-full slider-container">
-              <Slider {...textSettings}>
-                {info?.map((item) => (
-                  <div key={item?.name}>
-                    <h2 className="text-center font-medium text-[40px] leading-[60px] sm:text-[64px] sm:leading-[96px] md:text-[80px] md:leading-[120px] lg:text-[96px] lg:leading-[148px]">
-                      {item?.name}
-                    </h2>
-
-                    <Line />
-                    <p className="mt-6 font-medium text-[20px] leading-[30px] sm:text-[28px] sm:leading-[42px] md:text-[32px] md:leading-[48px] lg:text-[40px] lg:leading-[62px]">
-                      {item?.description}
-                    </p>
-
-                    <button className="inline-block mt-6 font-medium text-[18px] leading-[28px] sm:text-[22px] sm:leading-[34px] md:text-[24px] md:leading-[36px] lg:text-[28px] lg:leading-[44px] px-4 py-2 sm:px-6 sm:py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 border rounded-[24px] border-black">
-                      {item?.linkText}
-                    </button>
-                  </div>
-                ))}
-              </Slider>
-            </div>
-          </div>
-        </div>
-
-        <div className="block sm:hidden">
-          <div className="w-full flex items-center justify-center">
-            <img
-              className="shadow-2xl rounded-md"
-              src="/images/services/1.png"
-              alt=""
-            />
-          </div>
-          <div className="mt-10">
-            <h2 className="text-center font-medium text-[40px] leading-[60px] sm:text-[64px] sm:leading-[96px] md:text-[80px] md:leading-[120px] lg:text-[96px] lg:leading-[148px]">
-              Myra
-            </h2>
-
-            <Line />
-            <p className="mt-6 font-medium text-[20px] leading-[30px] sm:text-[28px] sm:leading-[42px] md:text-[32px] md:leading-[48px] lg:text-[40px] lg:leading-[62px]">
-              Capture The Best Precious Moments With Iitarat Frames
-            </p>
-
-            <button className="inline-block mt-6 font-medium text-[18px] leading-[28px] sm:text-[22px] sm:leading-[34px] md:text-[24px] md:leading-[36px] lg:text-[28px] lg:leading-[44px] px-4 py-2 sm:px-6 sm:py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 border rounded-[24px] border-black">
-              Visit Now
-            </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>
