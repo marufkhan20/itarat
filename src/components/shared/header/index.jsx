@@ -11,7 +11,7 @@ const Header = () => {
   const [navItems, setNavItems] = useState([]);
 
   useEffect(() => {
-    if (pathname === "/") {
+    if (pathname === "/" || pathname === "/packages") {
       setNavItems([
         {
           name: "Gallery",
@@ -23,7 +23,7 @@ const Header = () => {
         },
         {
           name: "Packages",
-          link: "#",
+          link: "/packages",
         },
         {
           name: "About us",
@@ -89,12 +89,14 @@ const Header = () => {
                 className="block xl:hidden cursor-pointer text-xl"
               />
             </div>
-            {pathname === "/" && (
-              <img
-                src="/images/services/3.png"
-                className="h-14 sm:h-20"
-                alt=""
-              />
+            {(pathname === "/" || pathname === "/packages") && (
+              <Link to="/">
+                <img
+                  src="/images/services/3.png"
+                  className="h-14 sm:h-20"
+                  alt=""
+                />
+              </Link>
             )}
 
             {pathname === "/noya" && (
@@ -127,7 +129,9 @@ const Header = () => {
           </nav>
           <div
             className={`flex items-center gap-5 text-2xl ${
-              pathname === "/" ? "opacity-0" : "opacity-100"
+              pathname === "/" || pathname === "/packages"
+                ? "opacity-0"
+                : "opacity-100"
             }`}
           >
             <FaRegHeart className="cursor-pointer" />
