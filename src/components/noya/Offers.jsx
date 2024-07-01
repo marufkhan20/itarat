@@ -14,7 +14,7 @@ const Offers = () => {
           <div className="relative">
             <img src="/images/noya/3.jpg" alt="" />
             <div className="absolute inset-0 w-full h-full z-50 flex flex-col justify-center items-center gap-[50px] bg-black/30 p-5">
-              <h2 className="text-white text-[24px] leading-[32px] sm:text-[40px] sm:leading-[44px] font-semibold">
+              <h2 className="text-white text-[24px] leading-[32px] sm:text-[40px] text-center sm:leading-[44px] font-semibold">
                 Occasionwear for kids
               </h2>
               <div>
@@ -27,7 +27,7 @@ const Offers = () => {
           <div className="relative">
             <img src="/images/noya/4.jpg" alt="" />
             <div className="absolute inset-0 w-full h-full z-50 flex flex-col justify-center items-center gap-[50px] bg-black/30 p-5">
-              <h2 className="text-white text-[24px] leading-[32px] sm:text-[40px] sm:leading-[44px] font-semibold">
+              <h2 className="text-white text-[24px] leading-[32px] sm:text-[40px] text-center sm:leading-[44px] font-semibold">
                 Beach holidays with kids
               </h2>
               <div>

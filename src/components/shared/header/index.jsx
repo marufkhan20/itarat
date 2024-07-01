@@ -81,61 +81,67 @@ const Header = () => {
   return (
     <header>
       <div className="border-b">
-        <div className="container flex items-center justify-between gap-5">
-          <div className="flex items-center gap-4">
+        <div className="container">
+          <div className="flex justify-between items-center gap-4">
             <div>
               <FaBars
                 onClick={() => setOpenMenu(true)}
                 className="block xl:hidden cursor-pointer text-xl"
               />
             </div>
-            {(pathname === "/" || pathname === "/packages") && (
-              <Link to="/">
+
+            <div className="my-3">
+              {(pathname === "/" || pathname === "/packages") && (
+                <Link to="/">
+                  <img
+                    src="/images/services/3.png"
+                    className="h-14 sm:h-20"
+                    alt=""
+                  />
+                </Link>
+              )}
+
+              {pathname === "/noya" && (
                 <img
-                  src="/images/services/3.png"
+                  src="/images/services/2.png"
                   className="h-14 sm:h-20"
                   alt=""
                 />
-              </Link>
-            )}
+              )}
 
-            {pathname === "/noya" && (
-              <img
-                src="/images/services/2.png"
-                className="h-14 sm:h-20"
-                alt=""
-              />
-            )}
+              {pathname === "/myra" && (
+                <img
+                  src="/images/services/1.png"
+                  className="h-14 sm:h-20"
+                  alt=""
+                />
+              )}
+            </div>
 
-            {pathname === "/myra" && (
-              <img
-                src="/images/services/1.png"
-                className="h-14 sm:h-20"
-                alt=""
-              />
-            )}
+            <div
+              className={`flex items-center gap-5 text-2xl ${
+                pathname === "/" || pathname === "/packages"
+                  ? "opacity-0"
+                  : "opacity-100"
+              }`}
+            >
+              <FaRegHeart className="cursor-pointer" />
+              <IoBagOutline className="cursor-pointer" />
+            </div>
           </div>
-          <nav className="container py-3 hidden xl:block">
-            <ul className="flex items-center justify-center gap-6">
-              {navItems?.map((nav) => (
-                <li
-                  key={nav?.name}
-                  className="font-medium border-b transition-all border-transparent hover:border-black"
-                >
-                  <Link to={nav?.link}>{nav?.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div
-            className={`flex items-center gap-5 text-2xl ${
-              pathname === "/" || pathname === "/packages"
-                ? "opacity-0"
-                : "opacity-100"
-            }`}
-          >
-            <FaRegHeart className="cursor-pointer" />
-            <IoBagOutline className="cursor-pointer" />
+          <div className="flex items-center justify-between gap-5">
+            <nav className="container py-3 hidden xl:block">
+              <ul className="flex items-center justify-center gap-6">
+                {navItems?.map((nav) => (
+                  <li
+                    key={nav?.name}
+                    className="font-medium border-b transition-all border-transparent hover:border-black"
+                  >
+                    <Link to={nav?.link}>{nav?.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
