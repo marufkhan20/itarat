@@ -8,25 +8,23 @@ const Services = () => {
   const [focusElement, setFocusElement] = useState(0);
   const [activeService, setActiveService] = useState(1);
 
-  const images = [
-    "/images/services/1.png",
-    "/images/services/2.png",
-    "/images/services/3.png",
-  ];
   const info = [
     {
+      image: "/images/services/myra.jpg",
       name: "Myra",
       description: "Capture The Best Precious Moments With Iitarat Frames",
       linkText: "Visit Now",
       link: "/myra",
     },
     {
+      image: "/images/services/noya.jpg",
       name: "Noya",
       description: "Capture The Best Precious Moments With Iitarat Frames",
       linkText: "Book Now",
       link: "/noya",
     },
     {
+      image: "/images/services/itarat.jpg",
       name: "Iitarat",
       description: "Capture The Best Precious Moments With Iitarat Frames",
       linkText: "Book Now",
@@ -50,26 +48,27 @@ const Services = () => {
 
         <div className="grid sm:grid-cols-2 gap-12 overflow-hidden h-[500px] sm:h-[300px] mt-5 sm:mt-0">
           <div className="flex items-center relative h-full w-full">
-            {images?.map((item, idx) => (
+            {info?.map((item, idx) => (
               <div
                 key={item}
                 className={`service-image-container absolute top-0 justify-center w-full left-[-150%] py-3 h-full items-center ${
                   idx + 1 === activeService ? "flex active" : "hidden"
                 }`}
               >
-                <div className={`service-image`}>
+                <Link to={item?.link} className={`service-image`}>
                   <img
                     className="w-full sm:w-[80%] lg:w-[300px] h-[100px] md:h-[150px] rounded-md"
-                    src={item}
+                    src={item?.image}
                     alt=""
                   />
-                </div>
+                </Link>
               </div>
             ))}
           </div>
           <div className="w-full h-full relative">
             {info?.map((item, idx) => (
-              <div
+              <Link
+                to={item?.link}
                 key={idx}
                 className={`service-content absolute top-0 right-[-150%] w-full sm:mt-8 ${
                   idx + 1 === activeService ? "block" : "hidden"
@@ -85,7 +84,7 @@ const Services = () => {
                     {item?.linkText}
                   </Link>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
