@@ -45,16 +45,6 @@ const Footer = () => {
               Sign up for exclusives like early access to sale, latest trends &
               arrivals from your fav designers
             </p>
-            <div className="flex items-center w-full flex-wrap justify-center max-w-[330px] gap-2 mt-3">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="py-2 px-3 outline-none border bg-transparent text-black placeholder:text-black border-black flex-1"
-              />
-              <button className="py-2 px-4 bg-black text-white">
-                SUBSCRIBE
-              </button>
-            </div>
           </div>
         </div>
       </div>

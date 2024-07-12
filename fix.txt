@@ -1,0 +1,39 @@
+TODO: Booking page for itarat
+
+TODO: Watch list page
+
+TODO: Category details page and show product details modal
+
+TODO: Sticky navbar - TODO: DONE
+
+TODO: Change portfolio text weight and make it italic - TODO: DONE
+
+TODO: Footer menu hover border - TODO: DONE
+
+TODO: Mobile noya fix - TODO: DONE
+
+TODO: Portfolio details page
+
+TODO: Remove portfolio navigation icon - TODO: DONE
+
+TODO: Change portfolio bg color to dark - TODO: DONE
+
+TODO: Myra our store section Remove - TODO: DONE
+
+TODO: Noya brand section remove - TODO: DONE
+
+TODO: Add what's app, location icon in itarat footer - TODO: DONE
+
+TODO: Add home menu in itarat page - TODO: DONE
+
+TODO: Remove curbe image in portfolio section - TODO: DONE
+
+TODO: Footer brand name txt right side and small size - TODO: DONE
+
+TODO: About menu click go to footer
+
+TODO: Same for portfolio menu
+
+TODO: Noya offer image remove and add a video - TODO: DONE
+
+TODO: Gallery page add and images is different

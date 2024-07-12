@@ -7,27 +7,36 @@ import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const { pathname } = useLocation();
+  const { hash, pathname } = useLocation();
   const [navItems, setNavItems] = useState([]);
+  const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/" || pathname === "/packages") {
+    if (pathname === "/" || pathname === "/packages" || pathname === "/book") {
       setNavItems([
+        {
+          name: "Home",
+          link: "/",
+        },
         {
           name: "Gallery",
           link: "#",
         },
         {
           name: "Portfolio",
-          link: "#",
+          link: "#portfolio",
         },
         {
           name: "Packages",
           link: "/packages",
         },
         {
+          name: "Book",
+          link: "/book",
+        },
+        {
           name: "About us",
-          link: "#",
+          link: "#footer",
         },
       ]);
     }
@@ -78,8 +87,31 @@ const Header = () => {
       ]);
     }
   }, [pathname]);
+
+  const changeNavBg = () => {
+    if (window.scrollY >= 100) {
+      setNavBg(true);
+    } else {
+      setNavBg(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavBg);
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
   return (
-    <header>
+    <header
+      className={`translate-x-0 duration-200 z-50 ${
+        navBg ? "fixed top-0 left-0 right-0 w-full bg-white shadow" : "relative"
+      }`}
+    >
       <div className="border-b">
         <div className="container">
           <div className="flex justify-between items-center gap-4">
@@ -91,7 +123,9 @@ const Header = () => {
             </div>
 
             <div className="my-3">
-              {(pathname === "/" || pathname === "/packages") && (
+              {(pathname === "/" ||
+                pathname === "/packages" ||
+                pathname === "/book") && (
                 <Link to="/">
                   <img
                     src="/images/services/3.png"
@@ -120,7 +154,9 @@ const Header = () => {
 
             <div
               className={`flex items-center gap-5 text-2xl ${
-                pathname === "/" || pathname === "/packages"
+                pathname === "/" ||
+                pathname === "/packages" ||
+                pathname === "/book"
                   ? "opacity-0"
                   : "opacity-100"
               }`}

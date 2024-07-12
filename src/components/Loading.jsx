@@ -14,7 +14,7 @@ const Loading = () => {
   return (
     <>
       <div
-        className={`fixed bg-white z-50 inset-0 translate-x-0 duration-300 ${
+        className={`fixed bg-white inset-0 translate-x-0 duration-300 z-[99999] ${
           isLoading ? "opacity-100 visible" : "opacity-0 invisible"
         } min-h-screen w-full flex justify-center items-center`}
       >

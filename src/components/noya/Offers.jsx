@@ -7,9 +7,16 @@ const Offers = () => {
         <div>
           <img src="/images/noya/1.jpg" alt="" />
         </div>
-        <div>
-          <img src="/images/noya/2.jpg" alt="" />
-        </div>
+        <iframe
+          width="100%"
+          className="h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
+          src="https://www.youtube.com/embed/aw1kJv-h4LY?si=mgm21peDI-0hC2f5"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
         <div className="grid md:grid-cols-2">
           <div className="relative">
             <img src="/images/noya/3.jpg" alt="" />

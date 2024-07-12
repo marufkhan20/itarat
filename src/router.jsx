@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Loading from "./components/Loading";
+import Book from "./pages/Book";
 import Home from "./pages/Home";
 import Myra from "./pages/Myra";
 import Noya from "./pages/Noya";
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/book",
+        element: <Book />,
       },
       {
         path: "/packages",

@@ -40,7 +40,7 @@ const Services = () => {
 
   console.log("activeService", activeService);
   return (
-    <section className="py-20 ">
+    <section className="pt-20 pb-10">
       <div className="container">
         <Heading>Our Service</Heading>
 
@@ -55,7 +55,7 @@ const Services = () => {
                   idx + 1 === activeService ? "flex active" : "hidden"
                 }`}
               >
-                <Link to={item?.link} className={`service-image`}>
+                <Link to={item?.link} className={`service-image shadow-lg`}>
                   <img
                     className="w-full sm:w-[80%] lg:w-[300px] h-[100px] md:h-[150px] rounded-md"
                     src={item?.image}
@@ -75,7 +75,9 @@ const Services = () => {
                 }`}
               >
                 <h2 className="text-[28px] font-medium">{item?.name}</h2>
-                <p className="text-xl mt-4 font-medium">{item?.description}</p>
+                <p className="text-base mt-4 font-normal">
+                  {item?.description}
+                </p>
                 <div>
                   <Link
                     to={item?.link}

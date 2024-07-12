@@ -1,25 +1,31 @@
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
+import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1D1D1D]">
+    <footer className="bg-[#1D1D1D]" id="footer">
       <div className="container">
-        <div className=" py-20 grid sm:grid-cols-3 md:grid-cols-5 gap-8">
+        <div className=" py-10 grid sm:grid-cols-3 md:grid-cols-5 gap-8">
           <div>
             <img src="/images/logo.png" className="logo-white" alt="" />
             <nav className="text-white mt-4">
               <ul className="flex items-center gap-4 flex-wrap">
-                <li>
+                <li className="transition-all border-b border-transparent hover:border-white">
                   <Link to="#">Gallery</Link>
                 </li>
-                <li>
+                <li className="transition-all border-b border-transparent hover:border-white">
                   <Link to="#">Portfolio</Link>
                 </li>
-                <li>
+                <li className="transition-all border-b border-transparent hover:border-white">
                   <Link to="/packages">Packages</Link>
                 </li>
-                <li>
+                <li className="transition-all border-b border-transparent hover:border-white">
                   <Link to="#">About us</Link>
                 </li>
               </ul>
@@ -37,8 +43,18 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/packages">
+                  <Link to="#">
                     <FaInstagram />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <FaWhatsapp />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <SlLocationPin />
                   </Link>
                 </li>
               </ul>
@@ -67,7 +83,6 @@ const Footer = () => {
 
       <div className="p-4 text-white flex items-center justify-between gap-5 flex-wrap">
         <p className="text-xs">© 2013-2024 ITARAT PHOTOGRAPHY</p>
-        <p className="text-xs">Brand Logo</p>
         <ul className="flex items-center gap-4 text-xs">
           <li className="uppercase">
             <Link to="#">Terms</Link>
@@ -75,6 +90,7 @@ const Footer = () => {
           <li className="uppercase">
             <Link to="#">privacy</Link>
           </li>
+          <p className="text-[10px]">Brand Logo</p>
         </ul>
       </div>
     </footer>

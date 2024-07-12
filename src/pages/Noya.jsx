@@ -1,6 +1,5 @@
 import React from "react";
 import Arrivals from "../components/noya/arrivals";
-import Brands from "../components/noya/brands";
 import Offers from "../components/noya/Offers";
 import Footer from "../components/shared/Footer";
 import Header from "../components/shared/header";
@@ -72,7 +71,7 @@ const Noya = () => {
         </div>
       </section>
 
-      <Brands />
+      {/* <Brands /> */}
       <Footer />
     </main>
   );
