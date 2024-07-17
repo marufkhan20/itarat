@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import Heading from "../myra/Heading";
 import Line from "../ui/Line";
@@ -25,7 +26,10 @@ const Portfolio = () => {
                 arrows: false,
               }}
             >
-              <div className="px-3 transition-all group relative">
+              <Link
+                to="/portfolio-details"
+                className="px-3 transition-all group relative"
+              >
                 <img
                   className="w-full h-full"
                   src="/images/portfolio/1.jpg"
@@ -36,7 +40,7 @@ const Portfolio = () => {
                     Portfolio 1
                   </h2>
                 </div>
-              </div>
+              </Link>
               <div className="px-3 transition-all group relative">
                 <img className="w-full" src="/images/portfolio/2.jpg" alt="" />
                 <div className="absolute inset-0 left-3 right-3 h-full bg-black/60 flex items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all rounded-lg">

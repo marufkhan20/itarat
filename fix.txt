@@ -1,6 +1,6 @@
-TODO: Booking page for itarat
+TODO: Booking page for itarat - TODO: DONE
 
-TODO: Watch list page
+TODO: Watch list page = TODO: DONE
 
 TODO: Category details page and show product details modal
 
@@ -30,9 +30,9 @@ TODO: Remove curbe image in portfolio section - TODO: DONE
 
 TODO: Footer brand name txt right side and small size - TODO: DONE
 
-TODO: About menu click go to footer
+TODO: About menu click go to footer - TODO: DONE
 
-TODO: Same for portfolio menu
+TODO: Same for portfolio menu - TODO: DONE
 
 TODO: Noya offer image remove and add a video - TODO: DONE
 

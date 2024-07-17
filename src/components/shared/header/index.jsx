@@ -14,6 +14,8 @@ const Header = () => {
   useEffect(() => {
     if (
       pathname === "/" ||
+      pathname === "/portfolio-details" ||
+      pathname === "/gallery" ||
       pathname === "/wishlist" ||
       pathname === "/packages" ||
       pathname === "/book"
@@ -25,7 +27,7 @@ const Header = () => {
         },
         {
           name: "Gallery",
-          link: "#",
+          link: "/gallery",
         },
         {
           name: "Portfolio",
@@ -129,6 +131,8 @@ const Header = () => {
 
             <div className="my-3">
               {(pathname === "/" ||
+                pathname === "/portfolio-details" ||
+                pathname === "/gallery" ||
                 pathname === "/wishlist" ||
                 pathname === "/packages" ||
                 pathname === "/book") && (
