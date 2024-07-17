@@ -14,7 +14,7 @@ const Collection = ({ collection }) => {
         />
         <img
           src="/images/icons/love.png"
-          className="absolute left-5 bottom-5 cursor-pointer"
+          className="absolute w-8 left-5 bottom-5 cursor-pointer"
           alt=""
         />
       </div>
@@ -23,9 +23,7 @@ const Collection = ({ collection }) => {
         <button
           className="
           cursor-pointer font-medium 
-          text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] 
-          leading-[24px] sm:leading-[28px] md:leading-[30px] lg:leading-[34px]
-        "
+          text-[16px]"
           onClick={() => setShowDetails(true)}
         >
           View Details

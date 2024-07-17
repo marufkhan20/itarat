@@ -6,48 +6,40 @@ const CollectionDetails = ({ collection, showDetails, setShowDetails }) => {
     <div
       className={`fixed transition-all duration-300 ${
         showDetails ? "opacity-100 visible bg-black/65" : "opacity-0 invisible"
-      } z-40 inset-0 min-h-screen w-full flex items-center justify-center`}
+      } z-[9999] inset-0 min-h-screen w-full flex items-center justify-center`}
       onClick={() => setShowDetails(false)}
     >
       <div
-        className="bg-white w-full m-5 xl:m-0 xl:w-[1200px] p-5 rounded-2xl overflow-auto"
+        className="bg-white h-[80vh] w-full m-5 xl:m-0 xl:w-[1200px] p-5 rounded-2xl overflow-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex gap-10 flex-col sm:flow-row">
+        <div className="flex flex-col sm:flex-row gap-10 sm:flow-row">
           <img className="h-fit w-fit" src={thumbnail} alt="" />
           <div className="flex flex-col gap-6">
             <p
               className="
-        font-medium 
-        text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] 
-        leading-[32px] sm:leading-[36px] md:leading-[46px] lg:leading-[62px]
+        font-medium text-base sm:text-xl
       "
             >
               Product name : {name}
             </p>
             <p
               className="
-        font-medium 
-        text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] 
-        leading-[32px] sm:leading-[36px] md:leading-[46px] lg:leading-[62px]
+        font-medium text-base sm:text-xl
       "
             >
               Quality : {quality}
             </p>
             <p
               className="
-        font-medium 
-        text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] 
-        leading-[32px] sm:leading-[36px] md:leading-[46px] lg:leading-[62px]
+        font-medium text-base sm:text-xl
       "
             >
               Clothes GSM : {gsm}
             </p>
             <p
               className="
-        font-medium 
-        text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] 
-        leading-[32px] sm:leading-[36px] md:leading-[46px] lg:leading-[62px]
+        font-medium text-base sm:text-xl
       "
             >
               Colure Available :{" "}
@@ -57,13 +49,11 @@ const CollectionDetails = ({ collection, showDetails, setShowDetails }) => {
             </p>
           </div>
         </div>
-        <div className="mt-32 flex items-center cursor-pointer gap-[14px]">
-          <img className="" src="/images/icons/love.png" alt="" />
+        <div className="mt-8 sm:mt-32 flex items-center cursor-pointer gap-[14px]">
+          <img className="w-8" src="/images/icons/love.png" alt="" />
           <p
             className="
-        font-medium 
-        text-[16px] sm:text-[20px] md:text-[24px] lg:text-[32px] 
-        leading-[24px] sm:leading-[30px] md:leading-[36px] lg:leading-[49px]
+        font-medium text-base sm:text-xl
       "
           >
             Add To Watch List{" "}

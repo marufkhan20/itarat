@@ -12,7 +12,12 @@ const Header = () => {
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/" || pathname === "/packages" || pathname === "/book") {
+    if (
+      pathname === "/" ||
+      pathname === "/wishlist" ||
+      pathname === "/packages" ||
+      pathname === "/book"
+    ) {
       setNavItems([
         {
           name: "Home",
@@ -41,7 +46,7 @@ const Header = () => {
       ]);
     }
 
-    if (pathname === "/myra") {
+    if (pathname?.includes("myra")) {
       setNavItems([
         {
           name: "New collection",
@@ -124,6 +129,7 @@ const Header = () => {
 
             <div className="my-3">
               {(pathname === "/" ||
+                pathname === "/wishlist" ||
                 pathname === "/packages" ||
                 pathname === "/book") && (
                 <Link to="/">
@@ -143,7 +149,7 @@ const Header = () => {
                 />
               )}
 
-              {pathname === "/myra" && (
+              {pathname?.includes("myra") && (
                 <img
                   src="/images/services/1.png"
                   className="h-14 sm:h-20"
@@ -161,7 +167,9 @@ const Header = () => {
                   : "opacity-100"
               }`}
             >
-              <FaRegHeart className="cursor-pointer" />
+              <Link to="/wishlist">
+                <FaRegHeart className="cursor-pointer" />
+              </Link>
               <IoBagOutline className="cursor-pointer" />
             </div>
           </div>

@@ -43,9 +43,7 @@ const Book = () => {
 
               <div className="px-5 flex-wrap gap-5 py-10 flex justify-between">
                 <div>
-                  <h2>
-                    Initial Google Hangout Wedding Photography Consultation
-                  </h2>
+                  <h2>In Studio Wedding Photography Consultation</h2>
                   <span>1 hour</span>
                   <p className="mt-6">
                     We would love to set up a complimentary video consultation
