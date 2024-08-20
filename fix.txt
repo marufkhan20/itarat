@@ -12,7 +12,7 @@ TODO: Footer menu hover border - TODO: DONE
 
 TODO: Mobile noya fix - TODO: DONE
 
-TODO: Portfolio details page
+TODO: Portfolio details page - TODO: DONE
 
 TODO: Remove portfolio navigation icon - TODO: DONE
 
@@ -36,4 +36,4 @@ TODO: Same for portfolio menu - TODO: DONE
 
 TODO: Noya offer image remove and add a video - TODO: DONE
 
-TODO: Gallery page add and images is different
+TODO: Gallery page add and images is different - TODO: DONE

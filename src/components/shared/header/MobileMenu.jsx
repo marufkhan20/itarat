@@ -1,13 +1,14 @@
 import React from "react";
 import { RiCloseLargeLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MobileMenu = ({ navItems, openMenu, setOpenMenu }) => {
+  const { pathname } = useLocation();
   return (
     <div
-      className={`fixed transition-all duration-300 ${
+      className={`fixed bg-white transition-all duration-300 ${
         openMenu ? "left-0" : "-left-[400%]"
-      } xl:-left-[100%] top-0 h-full w-full z-[10000] bg-black/30`}
+      } xl:-left-[100%] top-0 min-h-screen w-full z-[10000]`}
       onClick={() => setOpenMenu(false)}
     >
       <nav
@@ -29,6 +30,15 @@ const MobileMenu = ({ navItems, openMenu, setOpenMenu }) => {
               <Link to={nav?.link}>{nav?.name}</Link>
             </li>
           ))}
+
+          {pathname === "/" && (
+            <a
+              href="#"
+              className="bg-black text-white w-fit py-[18px] px-10 rounded-bl-3xl rounded-tr-3xl font-medium text-[15px] transition-all hover:rounded-tl-3xl hover:rounded-br-3xl hover:rounded-tr-none hover:rounded-bl-none"
+            >
+              Book Now
+            </a>
+          )}
         </ul>
       </nav>
     </div>
