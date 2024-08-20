@@ -96,7 +96,7 @@ const Header = () => {
   }, [pathname]);
 
   const changeNavBg = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 200) {
       setNavBg(true);
     } else {
       setNavBg(false);
@@ -113,7 +113,71 @@ const Header = () => {
       }
     }
   }, [hash]);
-  return (
+  return pathname === "/" ? (
+    <header
+      className={`translate-x-0 py-5 fixed duration-200 bg-transparent z-50 ${
+        navBg
+          ? "top-0 left-0 right-0 w-full bg-white shadow"
+          : "bg-transparent w-full"
+      }`}
+    >
+      <div>
+        <div className="container">
+          <div className="flex items-center justify-between gap-5">
+            <div>
+              <Link to="/">
+                <img
+                  src={`${
+                    navBg ? "/images/logo.png" : "/images/logo-white.png"
+                  }`}
+                  className="h-14 sm:h-16"
+                  alt=""
+                />
+              </Link>
+            </div>
+            <nav className="hidden xl:block">
+              <ul className="flex items-center justify-center gap-6">
+                {navItems?.map((nav) => (
+                  <li
+                    key={nav?.name}
+                    className={`font-medium border-b transition-all border-transparent ${
+                      navBg
+                        ? "text-black hover:border-black"
+                        : "hover:border-white text-white"
+                    }`}
+                  >
+                    <Link to={nav?.link}>{nav?.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="hidden xl:block">
+              <a
+                href="#"
+                className={`${
+                  navBg ? "bg-black text-white" : "bg-white text-black"
+                } py-[18px] px-10 rounded-bl-3xl rounded-tr-3xl font-medium text-[15px] transition-all hover:rounded-tl-3xl hover:rounded-br-3xl hover:rounded-tr-none hover:rounded-bl-none`}
+              >
+                Book Now
+              </a>
+            </div>
+            <div>
+              <FaBars
+                onClick={() => setOpenMenu(true)}
+                className="block text-white xl:hidden cursor-pointer text-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <MobileMenu
+        navItems={navItems}
+        openMenu={openMenu}
+        setOpenMenu={setOpenMenu}
+      />
+    </header>
+  ) : (
     <header
       className={`translate-x-0 duration-200 z-50 ${
         navBg ? "fixed top-0 left-0 right-0 w-full bg-white shadow" : "relative"
@@ -130,8 +194,7 @@ const Header = () => {
             </div>
 
             <div className="my-3">
-              {(pathname === "/" ||
-                pathname === "/portfolio-details" ||
+              {(pathname === "/portfolio-details" ||
                 pathname === "/gallery" ||
                 pathname === "/wishlist" ||
                 pathname === "/packages" ||
@@ -164,9 +227,7 @@ const Header = () => {
 
             <div
               className={`flex items-center gap-5 text-2xl ${
-                pathname === "/" ||
-                pathname === "/packages" ||
-                pathname === "/book"
+                pathname === "/packages" || pathname === "/book"
                   ? "opacity-0"
                   : "opacity-100"
               }`}
